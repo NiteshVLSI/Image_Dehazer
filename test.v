@@ -33,12 +33,12 @@ module global_tb;
         reset =1;
         #5;
         reset=0;
-        a_r = 8'hFF; b_r = 8'hFF; c_r = 8'hFF; d_r = 8'hFF; e_r = 8'hFF;
-        f_r = 8'hFF; g_r = 8'hFF; h_r = 8'hFF; i_r = 8'hFF;
-        a_g = 8'hFF; b_g = 8'hFF; c_g = 8'hFF; d_g = 8'hFF; e_g = 8'hFF;
-        f_g = 8'hFF; g_g = 8'hFF; h_g = 8'hFF; i_g = 8'hFF;
-        a_b = 8'hFF; b_b = 8'hFF; c_b = 8'hFF; d_b = 8'hFF; e_b = 8'hFF;
-        f_b = 8'hFF; g_b = 8'hFF; h_b = 8'hFF; i_b = 8'hFF;
+        a_r = 8'h0; b_r = 8'h0; c_r = 8'h0; d_r = 8'h0; e_r = 8'h0;
+        f_r = 8'h0; g_r = 8'h0; h_r = 8'h0; i_r = 8'h0;
+        a_g = 8'h0; b_g = 8'h0; c_g = 8'h0; d_g = 8'h0; e_g = 8'h0;
+        f_g = 8'h0; g_g = 8'h0; h_g = 8'h0; i_g = 8'h0;
+        a_b = 8'h0; b_b = 8'h0; c_b = 8'h0; d_b = 8'h0; e_b = 8'h0;
+        f_b = 8'h0; g_b = 8'h0; h_b = 8'h0; i_b = 8'h0;
 
         // Wait for a few clock cycles
          #(10*CLK_PERIOD);

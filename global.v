@@ -12,7 +12,7 @@ output reg [7:0]arg3_4,agg3_4,agb3_4
     
     initial
     begin
-    min3_4=8'hff;
+    min3_4=8'h00;
     end
     
     min9 m1(a_r,b_r,c_r,d_r,e_r,f_r,g_r,h_r,i_r,o1);
@@ -24,10 +24,10 @@ output reg [7:0]arg3_4,agg3_4,agb3_4
     begin
     if(reset)
     begin
-     rm2_3<=8'hFF;
-    gm2_3<=8'hFF;
-    bm2_3<=8'hFF;
-    m2_3<=8'hFF;
+     rm2_3<=8'h00;
+    gm2_3<=8'h00;
+    bm2_3<=8'h00;
+    m2_3<=8'h00;
    /* min3_4<=mux1;
     arg3_4<=mux2;
     agg3_4<=mux3;
@@ -48,10 +48,10 @@ output reg [7:0]arg3_4,agg3_4,agb3_4
     
     end
     
-    assign mux1 = (min3_4<o4)?min3_4:m2_3;
-    assign mux2 = (min3_4<o4)?arg3_4:rm2_3;
-    assign mux3 = (min3_4<o4)?agg3_4:gm2_3;
-    assign mux4 = (min3_4<o4)?agb3_4:bm2_3;
+    assign mux1 = (min3_4>o4)?min3_4:m2_3;
+    assign mux2 = (min3_4>o4)?arg3_4:rm2_3;
+    assign mux3 = (min3_4>o4)?agg3_4:gm2_3;
+    assign mux4 = (min3_4>o4)?agb3_4:bm2_3;
     
     
     

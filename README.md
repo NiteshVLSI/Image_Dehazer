@@ -1,6 +1,6 @@
 # Image_Dehazer
 
-This Project is based on the implementation of adaptive Haze Removal Method for hazy images.The objective of this project is to obtain a Haze Free image at the output when the given input image is a foggy image.The block diagram of the architecture for this defogging algorithm is seen below. 
+This Project is based on the implementation of adaptive Haze Removal Method for hazy images.The objective of this project is to obtain a Haze Free image at the output when the given input image is a foggy image.The block diagram of the architecture for this defogging algorithm is seen below. The schematics and simulations were verifed in Xilinx Vivado.
 
 ![image](https://github.com/NiteshVLSI/Image_Dehazer/assets/84613258/b5e112e8-31b1-4c23-83a5-61d7d9e02ea9)
 

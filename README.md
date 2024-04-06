@@ -9,3 +9,7 @@
 
 ## Transmission Map estimation
 <img width="745" alt="image" src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/b5d498d8-8b51-4ed4-8675-adb9843e29e7">
+
+## Local Atmospheric Light Calculation Module
+
+![image](https://github.com/NiteshVLSI/Image_Dehazer/assets/84613258/59e999e6-2593-4609-a105-c16f1f14864d)

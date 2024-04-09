@@ -18,4 +18,10 @@ This Project is based on the implementation of adaptive Haze Removal Method for 
 
 ![image](https://github.com/NiteshVLSI/Image_Dehazer/assets/84613258/59e999e6-2593-4609-a105-c16f1f14864d)
 
+## Final Schematic
+<img width="779" alt="image" src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/ea5a2cdb-36d3-465b-b41c-aab16f2ba211">
+
+
+## Utilization Report
+<img width="623" alt="image" src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/c563ad4f-ddd5-43e8-a6ff-a114e93e937d">
 

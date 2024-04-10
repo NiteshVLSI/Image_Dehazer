@@ -1,10 +1,11 @@
 # Image_Dehazer
-
-This Project is based on the implementation of adaptive Haze Removal Method for hazy images.The objective of this project is to obtain a Haze Free image at the output when the given input image is a foggy image.The block diagram of the architecture for this defogging algorithm is seen below. The schematics and simulations were verifed in Xilinx Vivado.
+This project describes an efficient haze removal method suitable for hardware design aims to obtain fog-free images. The method is based on the atmosphere scattering model and the dark channel prior method, enabling extraction of the atmospheric light of the entire image and the transmission map essential parameters for the recovery model. Instead of relying on a single global atmospheric light for restoring foggy images, the proposed design employs a local atmospheric light estimation method to achieve optimal results. To ensure overall image consistency without blocking artifacts, dynamic adjustment of local atmospheric light is implemented based on global atmospheric light. Additionally, to obtain an accurate transmission map and alleviate the halo effect, a refined estimation method is performed.
 
 ![image](https://github.com/NiteshVLSI/Image_Dehazer/assets/84613258/b5e112e8-31b1-4c23-83a5-61d7d9e02ea9)
 
 ## GALC unit
+
+
 <img width="752" alt="image" src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/670dd03b-43fc-4bab-a1d4-e7571232eb56">
 
 ## Edge_detection and modified dark channel

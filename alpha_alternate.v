@@ -31,4 +31,3 @@ module alpha_calc(
   end
   
 endmodule
-

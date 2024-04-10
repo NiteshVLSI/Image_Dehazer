@@ -25,14 +25,16 @@ module Memory__Buffer( gen_clk,rst,rdy,rd,addr, dout, A, B, C, D, E, F, G, H, I 
 input rst, rd ;
 output reg [23:0] A = 24'hFFFFFF, B = 24'hFFFFFF, C = 24'hFFFFFF, D = 24'hFFFFFF, E = 24'hFFFFFF, F = 24'hFFFFFF, G = 24'hFFFFFF, H = 24'hFFFFFF, I = 24'hFFFFFF  ;
 output reg rdy ;
-reg [23:0] LB1[101:0] ;
-reg [23:0] LB2[101:0] ;
-reg [23:0] LB3[101:0] ;
+parameter Image_width = 712 ;
+parameter Image_height = 712 ;
+reg [23:0] LB1[(Image_width +1):0] ;
+reg [23:0] LB2[(Image_width +1):0] ;
+reg [23:0] LB3[(Image_width +1):0] ;
 reg [7:0] row ;
-reg [6:0] count1 = 1 ;
-reg [6:0] count2 = 1 ;
-reg [6:0] count3 = 1 ;
-output reg[13:0]addr = 0 ;
+reg [9:0] count1 = 1 ;
+reg [9:0] count2 = 1 ;
+reg [9:0] count3 = 1 ;
+output reg[18:0]addr = 0 ;
 input [23:0] dout ;
 reg first = 0 , first1 = 1;
 reg [1:0] tmp = 1 ;
@@ -45,7 +47,7 @@ always@(posedge gen_clk)
 begin
     if(rst)
       begin  
-      for(i = 0; i <= 101; i = i + 1)
+      for(i = 0; i <= (Image_width +1); i = i + 1)
         begin
             LB1[i] <= 24'hFFFFFF ;
         end   
@@ -54,8 +56,8 @@ begin
        first <= 1 ; first1 <= 1 ;
        LB2[0] <= 24'hFFFFFF ;
        LB3[0] <= 24'hFFFFFF ;
-       LB2[101] <= 24'hFFFFFF ;
-       LB3[101] <= 24'hFFFFFF ;
+       LB2[(Image_width +1)] <= 24'hFFFFFF ;
+       LB3[(Image_width +1)] <= 24'hFFFFFF ;
        count1 <= 1 ;
        count2 <= 1 ;
        count3 <= 1 ;
@@ -63,20 +65,20 @@ begin
        tmp<= 1 ;
       end
   
-          else  if(first && (count2 < 101)&& (~rst))
+          else  if(first && (count2 < (Image_width +1))&& (~rst))
             begin
              LB2[count2] = dout ;  
              count2 = count2 +1 ;
              addr = addr + 1 ; 
             end
    
-           else if(first && (count3 < 101))
+           else if(first && (count3 < (Image_width +1)))
                 begin
                  LB3[count3] = dout ;  
                  count3 = count3 +1 ;
                  addr = addr + 1 ; 
                 end 
-                else if(first && (count3 == 101) )
+                else if(first && (count3 == (Image_width +1)) )
                 begin
                     first <= 0 ;
                     count1 <= 1 ;
@@ -103,7 +105,7 @@ begin
                                     I <= LB3[count1 + 1 ] ;
                                     if(first1 == 0)
                                     begin
-                                     LB3[100 ] <= (addr <= 9999)? dout :24'hFFFFFF ;
+                                     LB3[Image_width  ] <= (addr <= ((Image_width*Image_height) -1))? dout :24'hFFFFFF ;
                                     addr <= addr + 1;
                                     end
                                     
@@ -120,10 +122,10 @@ begin
                                     H <= LB3[count1 + 1] ;
                                     I <= LB3[count1 + 2 ] ;
                                     
-                                    LB1[count1 ] <= (addr <= 9999)? dout :24'hFFFFFF ; 
+                                    LB1[count1 ] <= (addr <= ((Image_width*Image_height) -1))? dout :24'hFFFFFF ; 
                                     count1 = count1 +1 ;
                                     addr = addr + 1 ;
-                                    if(count1 == 100)
+                                    if(count1 == Image_width)
                                     begin
                                         tmp <= tmp +1 ;
                                         count1 <= 1 ;
@@ -145,7 +147,7 @@ begin
                                     G <= LB1[count2 - 1 ] ;
                                     H <= LB1[count2] ;
                                     I <= LB1[count2 + 1 ] ;
-                                    LB1[100 ] <= (addr <= 9999)? dout :24'hFFFFFF ;
+                                    LB1[Image_width] <= (addr <= ((Image_width*Image_height) -1))? dout :24'hFFFFFF ;
                                     addr <= addr + 1;
                                 end
                                 else
@@ -160,10 +162,10 @@ begin
                                     H <= LB1[count2 + 1] ;
                                     I <= LB1[count2 + 2 ] ;
                                     
-                                    LB2[count2 ] <= (addr <= 9999)? dout :24'hFFFFFF ; 
+                                    LB2[count2 ] <= (addr <= ((Image_width*Image_height) -1))? dout :24'hFFFFFF ; 
                                     count2 = count2 +1 ;
                                     addr = addr + 1 ;
-                                    if(count2 == 100)
+                                    if(count2 == Image_width)
                                     begin
                                         tmp <= tmp +1 ;
                                         count2 <= 1 ;
@@ -184,7 +186,7 @@ begin
                                     G <= LB2[count3 - 1 ] ;
                                     H <= LB2[count3] ;
                                     I <= LB2[count3 + 1 ] ;
-                                    LB2[100 ] <= (addr <= 9999)? dout :24'hFFFFFF ;
+                                    LB2[Image_width ] <= (addr <= ((Image_width*Image_height) -1))? dout :24'hFFFFFF ;
                                     addr <= addr + 1;
                                 end
                                 else
@@ -199,10 +201,10 @@ begin
                                     H <= LB2[count3 + 1] ;
                                     I <= LB2[count3 + 2 ] ;
                                    
-                                    LB3[count3 ] <= (addr <= 9999)? dout :24'hFFFFFF ; 
+                                    LB3[count3 ] <= (addr <= ((Image_width*Image_height) -1))? dout :24'hFFFFFF ; 
                                     count3 = count3 +1 ;
                                     addr = addr + 1 ;
-                                    if(count3 == 100)
+                                    if(count3 == Image_width)
                                     begin
                                         tmp <= 1 ;
                                         count3 <= 1 ;

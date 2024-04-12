@@ -28,6 +28,29 @@ This project describes an efficient haze removal method suitable for hardware de
 
 
 ## Results
-![Image 1](![hazed1](https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/2799188c-a587-442f-8d96-9efb7fc6a678)
-) ![Image 2](![dehazed](https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/ea77009a-68d1-4ab0-b95e-63bede83b8f8)
-)
+
+
+
+
+<table border="1">
+    <tr>
+        <th>Hazed Image</th>
+        <th>Dehazed Image</th>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/2799188c-a587-442f-8d96-9efb7fc6a678" alt="Hazed Image 1"></td>
+        <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/ea77009a-68d1-4ab0-b95e-63bede83b8f8" alt="Dehazed Image 1"></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/c260a269-6df4-4112-a750-b1aa10492037" alt="Hazed Image 2"></td>
+        <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/8a94a4cf-5acd-4ccb-8d6d-dd0b2fc27dfb" alt="Dehazed Image 2"></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/12ccd837-3514-49d6-bb59-2f7b12118a4b" alt="Hazed Image 3"></td>
+        <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/fa7e7397-0ead-420a-a7c6-193dc70f20b9" alt="Dehazed Image 3"></td>
+    </tr>
+   
+</table>
+
+
+

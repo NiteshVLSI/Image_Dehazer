@@ -49,6 +49,14 @@ This project describes an efficient haze removal method suitable for hardware de
         <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/12ccd837-3514-49d6-bb59-2f7b12118a4b" alt="Hazed Image 3"></td>
         <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/fa7e7397-0ead-420a-a7c6-193dc70f20b9" alt="Dehazed Image 3"></td>
     </tr>
+     <tr>
+        <td> <img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/e7283951-a8c6-4626-b04f-e7ad5cb654f9" alt="Hazed Image 4">
+        </td>
+        <td><img src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/f24f257b-7141-4879-a5cf-17be7b537c3b" alt="Dehazed Image 4"></td>
+    </tr>
+
+     
+
    
 </table>
 

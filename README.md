@@ -26,3 +26,8 @@ This project describes an efficient haze removal method suitable for hardware de
 ## Utilization Report
 <img width="623" alt="image" src="https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/c563ad4f-ddd5-43e8-a6ff-a114e93e937d">
 
+
+## Results
+![Image 1](![hazed1](https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/2799188c-a587-442f-8d96-9efb7fc6a678)
+) ![Image 2](![dehazed](https://github.com/NiteshVLSI/Image_Dehazer/assets/140998787/ea77009a-68d1-4ab0-b95e-63bede83b8f8)
+)
